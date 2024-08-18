@@ -357,9 +357,32 @@
         vertical-align: middle; /* Align h3 with the bullet */
         animation: revealText 1.5s ease forwards;
       }
+      .btn-sucess{font-size: 2.5rem;
+        background: linear-gradient(120deg, #78008a 24.25%, #b2008f 69.56%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     </style>
   </head>
   <body>
+    <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen bg-dark">
+    <div class="modal-content">     
+      <div class="modal-body">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Video Introduction</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div style="height: 500px " class="video-container">
+          <iframe src="https://capgemini-my.sharepoint.com/personal/advaid_gireesan_capgemini_com/_layouts/15/embed.aspx?UniqueId=36689f60-d006-4604-945f-550cf455d7ba&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="100%" height="650px" frameborder="0" scrolling="no" allowfullscreen title="Revolutionize Code Management_ Automated AI Integration (1).mp4"></iframe> </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
     <div class="hero">
       <img
         src="images/hero-top-right-decor.svg"
@@ -377,6 +400,9 @@
         Enhance your code quality with automated fixes and streamlined JUnit
         test management.
       </div>
+      <button type="button" class="btn btn-lg btn-sucess" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Watch Intro
+      </button>
     </div>
 
     <div class="features" id="features">
