@@ -349,6 +349,13 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+
+      .thank-you-section h3{
+        background: linear-gradient(120deg, #78008a 24.25%, #b2008f 69.56%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: revealText 1.5s ease forwards;
+      }
       .thank-you-section p {
         color: #fff;
         display: inline;
@@ -356,23 +363,29 @@
         margin: 0;
         vertical-align: middle; /* Align h3 with the bullet */
         animation: revealText 1.5s ease forwards;
+        font-weight: 300;
       }
       .btn-sucess{font-size: 2.5rem;
         background: linear-gradient(120deg, #78008a 24.25%, #b2008f 69.56%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+      .video-iframe{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px !important;
+        border-radius: 25px !important;
+      }
     </style>
   </head>
   <body>
     <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-fullscreen bg-dark">
-    <div class="modal-content">     
+  <div  class="modal-dialog modal-dialog-centered modal-fullscreen bg-dark">
+    <div style=" background-color: #0d1117;
+        color: #c9d1d9;" class="modal-content">     
       <div class="modal-body">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">Video Introduction</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button style="color: #fff;" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div style="height: 500px " class="video-container">
           <iframe src="https://capgemini-my.sharepoint.com/personal/advaid_gireesan_capgemini_com/_layouts/15/embed.aspx?UniqueId=36689f60-d006-4604-945f-550cf455d7ba&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="100%" height="650px" frameborder="0" scrolling="no" allowfullscreen title="Revolutionize Code Management_ Automated AI Integration (1).mp4"></iframe> </div>
@@ -600,7 +613,9 @@
 
           <div style="height: 700px" class="video-container">
             <iframe
-            style="height: 100%; width: 100%"
+            class="video-iframe"
+            style="height: 100%; width: 100%;  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px !important;
+        border-radius: 25px !important;"
              src="https://capgemini-my.sharepoint.com/personal/advaid_gireesan_capgemini_com/_layouts/15/embed.aspx?UniqueId=0cec5f30-bc00-439b-a9d6-a76c1b262109&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" frameborder="0" scrolling="no" allowfullscreen title="Demo.mp4"></iframe>
             </iframe>
           </div>
@@ -612,6 +627,7 @@
       <div class="container">
         <div class="row text-center">
           <h2>Thank You!</h2>
+          <h3>Team Mystic Mavriks</h3>
           <p>
             We appreciate your time and interest in BugBuster. If you have any
             questions or need further assistance, feel free to contact us. We
