@@ -8,22 +8,22 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
+ 
     <!-- Include Roboto font with all font weights -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-
+ 
     <style>
       body {
         background-color: #0d1117;
         color: #c9d1d9;
         font-family: "Roboto", Arial, sans-serif;
-        margin: 0;
-        padding: 0;
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
       }
-
+ 
       .hero {
         display: flex;
         flex-direction: column;
@@ -32,17 +32,17 @@
         padding: 150px 0;
         text-align: center;
         position: relative;
-        overflow: hidden;
-        min-height: 95vh;
+        overflow: hidden; /* Ensure the decorations are contained within the hero */
+        min-height: 95vh; /* Ensure the hero section is at least full viewport height */
       }
-
+ 
       .hero-title-1,
       .hero-title-2,
       .hero-subtitle {
-        position: relative;
-        z-index: 2;
+        position: relative; /* Ensure these elements are positioned above the decorations */
+        z-index: 2; /* Ensure these elements are on top of the images */
       }
-
+ 
       .hero-title-1 {
         font-size: 4.5rem;
         font-weight: 400;
@@ -53,7 +53,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-
+ 
       .hero-title-2 {
         color: #15cbf4;
         font-size: 4rem;
@@ -63,7 +63,7 @@
         animation: revealText 1.5s ease forwards;
         text-shadow: 2px 2px 2px black;
       }
-
+ 
       .hero-subtitle {
         display: inline-block;
         font-size: 1.65rem;
@@ -71,12 +71,12 @@
         margin-bottom: 30px;
         opacity: 0;
         animation: revealText 1.5s ease 0.5s forwards;
-        max-width: 90%;
+        max-width: 90%; /* Restrict width to avoid full stretch */
         text-align: center;
         color: #d4d4d8;
         text-shadow: 2px 2px 2px black;
       }
-
+ 
       @keyframes revealText {
         0% {
           opacity: 0;
@@ -87,30 +87,31 @@
           transform: translateY(0);
         }
       }
-
+ 
       .hero-top-right-decor {
         position: absolute;
         top: 0;
         right: 0;
         width: 468px;
         height: auto;
-        z-index: 1;
+        z-index: 1; /* Ensure the image is behind the content */
       }
-
+ 
       .home-bottom-left-decor {
         position: absolute;
         bottom: 0;
         left: 0;
         width: 548px;
         height: auto;
-        z-index: 1;
+        z-index: 1; /* Ensure the image is behind the content */
       }
-
+ 
+      /* Key Features section styles */
       .features {
         padding: 50px 0;
         color: #c9d1d9;
       }
-
+ 
       .features h2 {
         font-size: 4.5rem;
         font-weight: 400;
@@ -120,16 +121,16 @@
         background: linear-gradient(90deg, #b24bf3 0%, #3f00ff 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        text-align: left;
+        text-align: left; /* Align title to left */
       }
-
+ 
       .feature-item {
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 1s ease, transform 1s ease;
         margin-bottom: 30px;
       }
-
+ 
       .feature-item h3 {
         background: linear-gradient(120deg, #78008a 24.25%, #b2008f 69.56%);
         -webkit-background-clip: text;
@@ -137,39 +138,42 @@
         display: inline;
         font-size: 2.5rem;
         margin: 0;
+        vertical-align: middle; /* Align h3 with the bullet */
       }
-
+ 
       .feature-item p {
         font-size: 1.2rem;
-        margin-top: 10px;
+        margin-top: 10px; /* Separate p from h3 */
         font-weight: 300;
       }
-
+ 
       .feature-item.visible {
         opacity: 1;
         transform: translateY(0);
       }
-
+ 
+      /* Key Features image reveal from the right */
       .feature-image-placeholder {
         width: 100%;
         height: auto;
-        max-width: 400px;
+        max-width: 400px; /* Limit the image size */
         margin: auto;
-        opacity: 0;
-        transform: translateX(50px);
+        opacity: 0; /* Start hidden */
+        transform: translateX(50px); /* Start from the right */
         transition: opacity 1.5s ease, transform 1.5s ease;
       }
-
+ 
       .feature-image-placeholder.visible {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0); /* Move to the original position */
       }
-
+ 
+      /* How to Use section styles */
       .how-to-use {
         padding: 50px 0;
         color: #c9d1d9;
       }
-
+ 
       .how-to-use h2 {
         font-size: 4.5rem;
         font-weight: 400;
@@ -181,46 +185,49 @@
         -webkit-text-fill-color: transparent;
         text-align: left;
       }
-
+ 
       .how-to-use .feature-item {
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 1s ease, transform 1s ease;
         margin-bottom: 30px;
       }
-
+ 
       .how-to-use .feature-item h3 {
         color: #15cbf4;
         display: inline;
         font-size: 2.5rem;
         margin: 0;
+        vertical-align: middle; /* Align h3 with the bullet */
       }
-
+ 
       .how-to-use .feature-item p {
         font-size: 1.2rem;
-        margin-top: 10px;
+        margin-top: 10px; /* Separate p from h3 */
       }
-
+ 
       .how-to-use .feature-item.visible {
         opacity: 1;
         transform: translateY(0);
       }
-
+ 
+      /* How to Use image reveal from the left */
       .how-to-use .feature-image-placeholder {
         width: 100%;
         height: auto;
         max-width: 500px;
         margin: auto;
-        opacity: 0;
-        transform: translateX(-50px);
+        opacity: 0; /* Start hidden */
+        transform: translateX(-50px); /* Start from the left */
         transition: opacity 1.5s ease, transform 1.5s ease;
       }
-
+ 
       .how-to-use .feature-image-placeholder.visible {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0); /* Move to the original position */
       }
-
+ 
+      /* Architecture Diagrams section styles */
       .architecture-diagrams {
         padding: 50px 0;
         text-align: center;
@@ -228,11 +235,11 @@
         align-items: center;
         height: 100vh;
       }
-
+ 
       .architecture-diagrams p {
         text-align: left;
       }
-
+ 
       .architecture-diagrams h2 {
         font-size: 4.5rem;
         font-weight: 400;
@@ -243,19 +250,66 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-
+ 
       .architecture-diagrams .diagram-placeholder {
         cursor: pointer;
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 1.5s ease, transform 1.5s ease;
       }
-
+ 
       .architecture-diagrams .diagram-placeholder.visible {
         opacity: 1;
         transform: translateY(0);
       }
-
+      .diagram-title {
+        background: linear-gradient(120deg, #78008a 24.25%, #b2008f 69.56%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-top: 25px;
+      }
+ 
+      /* Popup styles */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+ 
+      .popup img {
+        max-width: 90%;
+        max-height: 90%;
+      }
+ 
+      .popup .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+        color: #000;
+        cursor: pointer;
+      }
+      .reveal-from-bottom {
+        transform: translateY(50px);
+        opacity: 0;
+        transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+        width: 100%;
+        height: auto;
+      }
+ 
+      .reveal-from-bottom.active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+ 
+      /* Architecture Diagrams section styles */
       .demo-section {
         padding: 50px 0;
         text-align: center;
@@ -263,7 +317,7 @@
         align-items: center;
         height: 100vh;
       }
-
+ 
       .demo-section h2 {
         font-size: 4.5rem;
         font-weight: 400;
@@ -274,7 +328,8 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-
+ 
+      /* Architecture Diagrams section styles */
       .thank-you-section {
         min-height: 100vh;
         margin: auto;
@@ -283,7 +338,7 @@
         display: flex;
         align-items: center;
       }
-
+ 
       .thank-you-section h2 {
         font-size: 4.5rem;
         font-weight: 400;
@@ -294,91 +349,53 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-
-      .thank-you-section h3 {
+ 
+      .thank-you-section h3{
         background: linear-gradient(120deg, #78008a 24.25%, #b2008f 69.56%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: revealText 1.5s ease forwards;
       }
-
       .thank-you-section p {
         color: #fff;
         display: inline;
         font-size: 1.5rem;
         margin: 0;
-        vertical-align: middle;
+        vertical-align: middle; /* Align h3 with the bullet */
         animation: revealText 1.5s ease forwards;
         font-weight: 300;
       }
-
-      .btn-sucess {
-        font-size: 2.5rem;
+      .btn-sucess{font-size: 2.5rem;
         background: linear-gradient(120deg, #78008a 24.25%, #b2008f 69.56%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-
-      .video-iframe {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-          rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-        border-radius: 25px;
+      .video-iframe{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px !important;
+        border-radius: 25px !important;
       }
     </style>
   </head>
-
   <body>
     <!-- Modal -->
-    <div
-      class="modal fade"
-      id="staticBackdrop"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-fullscreen bg-dark">
-        <div
-          style="
-            background-color: #0d1117;
-            color: #c9d1d9;
-          "
-          class="modal-content"
-        >
-          <div class="modal-body">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                Video Introduction
-              </h1>
-              <button
-                style="color: #fff;"
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div style="height: 750px; width: 100%" class="video-container">
-              <iframe
-                style="height: 750px; width: 100%"
-                src="images/Bug.mp4"
-              ></iframe>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div  class="modal-dialog modal-dialog-centered modal-fullscreen bg-dark">
+    <div style=" background-color: #0d1117;
+        color: #c9d1d9;" class="modal-content">     
+      <div class="modal-body">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Video Introduction</h1>
+          <button style="color: #fff;" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div style="height: 750px ;width:100%" class="video-container">
+          <iframe style="height: 750px ;width:100%" src="images/Bug.mp4"></iframe> </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
-
+  </div>
+</div>
     <div class="hero">
       <img
         src="images/hero-top-right-decor.svg"
@@ -396,16 +413,11 @@
         Enhance your code quality with automated fixes and streamlined JUnit
         test management.
       </div>
-      <button
-        type="button"
-        class="btn btn-lg btn-sucess"
-        data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop"
-      >
+      <button type="button" class="btn btn-lg btn-sucess" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Watch Intro
       </button>
     </div>
-
+ 
     <div class="features" id="features">
       <div class="container">
         <div class="row">
@@ -416,7 +428,13 @@
               <p>
                 BugBuster significantly reduces manual code review and testing
                 efforts by automating the identification and resolution of
-                issues flagged by SonarQube.
+                issues flagged by SonarQube. The AI-powered utility not only
+                detects these issues but also suggests and implements fixes,
+                which dramatically shortens the time developers spend on code
+                refinement. Additionally, BugBuster streamlines the process of
+                fixing JUnit tests, ensuring that test coverage is both
+                comprehensive and reliable without requiring extensive manual
+                intervention.
               </p>
             </div>
             <div class="feature-item">
@@ -424,14 +442,20 @@
               <p>
                 BugBuster consistently applies industry best practices across
                 your codebase, resulting in more maintainable and reliable
-                software.
+                software. By automatically fixing SonarQube issues and ensuring
+                JUnit tests are up-to-date and effective, BugBuster enhances
+                code quality while maintaining high standards throughout the
+                development lifecycle.
               </p>
             </div>
             <div class="feature-item">
               <h3>Scalability</h3>
               <p>
                 BugBuster is designed to handle large and complex codebases,
-                making it an ideal solution for growing organizations.
+                making it an ideal solution for growing organizations. Its
+                ability to efficiently manage and improve code quality at scale
+                ensures that development teams can maintain productivity and
+                code integrity, even as projects expand in size and complexity.
               </p>
             </div>
           </div>
@@ -445,7 +469,7 @@
         </div>
       </div>
     </div>
-
+ 
     <div class="how-to-use" id="how-to-use">
       <div class="container">
         <div class="row">
@@ -462,26 +486,35 @@
               <h3>Upload Your Project</h3>
               <p>
                 Begin by uploading your project files to BugBuster. The
-                intuitive interface makes itsimple to select and submit your codebase for analysis. Once uploaded, BugBuster will begin processing your project to identify any issues or areas for improvement.
+                intuitive interface makes it simple to select and submit your
+                codebase for analysis. Once uploaded, BugBuster will begin
+                processing your project to identify any issues or areas for
+                improvement.
               </p>
             </div>
             <div class="feature-item">
               <h3>Analyze Results</h3>
               <p>
-                BugBuster utilizes SonarQube to perform a thorough analysis of your code. The tool generates detailed reports highlighting potential issues, vulnerabilities, and areas where best practices can be applied.
+                BugBuster utilizes SonarQube to perform a thorough analysis of
+                your code. The tool will generate detailed reports highlighting
+                potential issues, vulnerabilities, and areas where best
+                practices can be applied.
               </p>
             </div>
             <div class="feature-item">
               <h3>Apply Fixes and Generate PRs</h3>
               <p>
-                After analysis, BugBuster provides automated fixes for detected issues and generates pull requests to streamline the integration of these fixes into your codebase. Review the changes, merge the pull requests, and your code will be enhanced and up-to-date.
+                After analysis, BugBuster provides automated fixes for detected
+                issues and generates pull requests to streamline the integration
+                of these fixes into your codebase. Review the changes, merge the
+                pull requests, and your code will be enhanced and up-to-date.
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+ 
     <!-- Architecture Diagrams Section -->
     <div class="architecture-diagrams">
       <div class="container">
@@ -489,10 +522,24 @@
           <div class="container">
             <div class="row">
               <div style="margin: auto" class="col-md-6">
-                <h2 style="text-align: left">Foundational Architecture Overview</h2>
+                <h2 style="text-align: left">
+                  Foundational Architecture Overview
+                </h2>
                 <div class="feature-item">
                   <p>
-                    This diagram illustrates the backend architecture in detail, highlighting key components such as the API Gateway, Repository Manager, Analysis Manager, and Fix Manager. It provides a comprehensive view of how these components interact and collaborate to facilitate the end-to-end process of code analysis and automated fixes. The API Gateway serves as the central entry point for incoming requests, while the Repository Manager handles the storage and retrieval of code artifacts. The Analysis Manager performs in-depth code evaluations to identify issues, and the Fix Manager applies automated corrections. This cohesive interaction between components ensures an efficient and streamlined approach to managing and improving code quality.
+                    This diagram illustrates the backend architecture in detail,
+                    highlighting key components such as the API Gateway,
+                    Repository Manager, Analysis Manager, and Fix Manager. It
+                    provides a comprehensive view of how these components
+                    interact and collaborate to facilitate the end-to-end
+                    process of code analysis and automated fixes. The API
+                    Gateway serves as the central entry point for incoming
+                    requests, while the Repository Manager handles the storage
+                    and retrieval of code artifacts. The Analysis Manager
+                    performs in-depth code evaluations to identify issues, and
+                    the Fix Manager applies automated corrections. This cohesive
+                    interaction between components ensures an efficient and
+                    streamlined approach to managing and improving code quality.
                   </p>
                 </div>
               </div>
@@ -500,7 +547,7 @@
                 <img
                   style="cursor: pointer"
                   src="images/level1arch.png"
-                  alt="Architecture Diagram 1"
+                  alt="How to Use Placeholder"
                   class="reveal-from-bottom"
                   onclick="openPopup('images/level1arch.png')"
                 />
@@ -510,7 +557,6 @@
         </div>
       </div>
     </div>
-
     <div class="architecture-diagrams">
       <div class="container">
         <div class="row text-center">
@@ -520,17 +566,30 @@
                 <img
                   style="cursor: pointer"
                   src="images/level2arch.png"
-                  alt="Architecture Diagram 2"
+                  alt="How to Use Placeholder"
                   class="reveal-from-bottom"
                   onclick="openPopup('images/level2arch.png')"
                 />
               </div>
-
+ 
               <div style="margin: auto" class="col-md-6">
                 <h2 style="text-align: left">Detailed Architecture Overview</h2>
                 <div class="feature-item">
                   <p>
-                    This diagram presents a high-level overview of the AI-driven code analysis system’s architecture. It highlights the interactions between key elements, including users, the frontend, backend components, and external systems such as SonarQube, Google Gemini, and GitHub. The diagram illustrates how users interact with the frontend interface to submit code for analysis. The frontend then communicates with the backend, which orchestrates the analysis process using AI algorithms. The system integrates with SonarQube for code quality metrics, Google Gemini for advanced analytics, and GitHub for source code management and version control. This interconnected framework ensures a seamless flow of data and insights, driving enhanced code quality and automated improvements across the development lifecycle.
+                    This diagram presents a high-level overview of the AI-driven
+                    code analysis system’s architecture. It highlights the
+                    interactions between key elements, including users, the
+                    frontend, backend components, and external systems such as
+                    SonarQube, Google Gemini, and GitHub. The diagram
+                    illustrates how users interact with the frontend interface
+                    to submit code for analysis. The frontend then communicates
+                    with the backend, which orchestrates the analysis process
+                    using AI algorithms. The system integrates with SonarQube
+                    for code quality metrics, Google Gemini for advanced
+                    analytics, and GitHub for source code management and version
+                    control. This interconnected framework ensures a seamless
+                    flow of data and insights, driving enhanced code quality and
+                    automated improvements across the development lifecycle.
                   </p>
                 </div>
               </div>
@@ -539,89 +598,111 @@
         </div>
       </div>
     </div>
-
-    <div class="architecture-diagrams">
+ <!-- Architecture Diagrams Section -->
+ <div class="architecture-diagrams">
+  <div class="container">
+    <div class="row text-center">
       <div class="container">
-        <div class="row text-center">
-          <div class="container">
-            <div class="row">
-              <div style="margin: auto" class="col-md-6">
-                <h2 style="text-align: left">RAG Architecture Overview</h2>
-                <div class="feature-item">
-                  <p>
-                    This diagram illustrates the backend architecture in detail, highlighting key components such as the API Gateway, Repository Manager, Analysis Manager, and Fix Manager. It provides a comprehensive view of how these components interact and collaborate to facilitate the end-to-end process of code analysis and automated fixes. The API Gateway serves as the central entry point for incoming requests, while the Repository Manager handles the storage and retrieval of code artifacts. The cohesive interaction between components ensures an efficient and streamlined approach to managing and improving code quality.
-                  </p>
-                </div>
-              </div>
-              <div class="col-md-6 d-flex align-items-center">
-                <img
-                  style="cursor: pointer"
-                  src="images/RAM.webp"
-                  alt="RAG Architecture Diagram"
-                  class="reveal-from-bottom"
-                  onclick="openPopup('images/RAM.webp')"
-                />
-              </div>
+        <div class="row">
+          <div style="margin: auto" class="col-md-6">
+            <h2 style="text-align: left">
+              RAG Architecture Overview
+            </h2>
+            <div class="feature-item">
+              <p>
+                This diagram illustrates the backend architecture in detail,
+                highlighting key components such as the API Gateway,
+                Repository Manager, Analysis Manager, and Fix Manager. It
+                provides a comprehensive view of how these components
+                interact and collaborate to facilitate the end-to-end
+                process of code analysis and automated fixes. The API
+                Gateway serves as the central entry point for incoming
+                requests, while the Repository Manager handles the storage
+                and retrieval of code artifacts. The Analysis Manager
+                performs in-depth code evaluations to identify issues, and
+                the Fix Manager applies automated corrections. This cohesive
+                interaction between components ensures an efficient and
+                streamlined approach to managing and improving code quality.
+              </p>
             </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-center">
+            <img
+              style="cursor: pointer"
+              src="images/RAM.webp"
+              alt="How to Use Placeholder"
+              class="reveal-from-bottom"
+              onclick="openPopup('images/RAM.webp')"
+            />
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Demo Video Section -->
+  </div>
+</div>
+    <!-- Architecture Diagrams Section -->
     <div class="demo-section">
       <div class="container">
         <div class="row text-center">
           <h2>Discover How BugBuster Works</h2>
           <p style="text-align: left">
-            Watch our comprehensive video to see BugBuster in action and learn how it can revolutionize your code quality assurance process. Experience its powerful features and see how easy it is to integrate into your workflow.
+            Watch our comprehensive video to see BugBuster in action and learn
+            how it can revolutionize your code quality assurance process.
+            Experience its powerful features and see how easy it is to integrate
+            into your workflow.
           </p>
-
+ 
           <div style="height: 700px" class="video-container">
             <iframe
-              class="video-iframe"
-              style="height: 100%; width: 100%;"
-              src="https://capgemini-my.sharepoint.com/personal/advaid_gireesan_capgemini_com/_layouts/15/embed.aspx?UniqueId=0cec5f30-bc00-439b-a9d6-a76c1b262109&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen
-              title="Demo.mp4"
-            ></iframe>
+            class="video-iframe"
+            style="height: 100%; width: 100%;  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px !important;
+        border-radius: 25px !important;"
+             src="https://capgemini-my.sharepoint.com/personal/advaid_gireesan_capgemini_com/_layouts/15/embed.aspx?UniqueId=0cec5f30-bc00-439b-a9d6-a76c1b262109&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" frameborder="0" scrolling="no" allowfullscreen title="Demo.mp4"></iframe>
+            </iframe>
           </div>
         </div>
       </div>
     </div>
-
+ 
     <div class="thank-you-section">
       <div class="container">
         <div class="row text-center">
           <h2>Thank You!</h2>
           <h3>Team Mystic Mavericks</h3>
           <p>
-            We appreciate your time and interest in BugBuster. If you have any questions or need further assistance, feel free to contact us. We look forward to helping you streamline your code quality assurance process!
+            We appreciate your time and interest in BugBuster. If you have any
+            questions or need further assistance, feel free to contact us. We
+            look forward to helping you streamline your code quality assurance
+            process!
           </p>
         </div>
       </div>
     </div>
-
+ 
     <!-- Popup for Images -->
     <div class="popup" id="popup">
       <span class="close" onclick="closePopup()">&times;</span>
       <img id="popupImage" src="" alt="Popup Image" />
     </div>
-
+ 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const featureItems = document.querySelectorAll(".feature-item");
-        const featureImage = document.querySelector(".features .feature-image-placeholder");
-        const howToUseImage = document.querySelector(".how-to-use .feature-image-placeholder");
-        const diagramPlaceholders = document.querySelectorAll(".architecture-diagrams .diagram-placeholder");
-
+        const featureImage = document.querySelector(
+          ".features .feature-image-placeholder"
+        );
+        const howToUseImage = document.querySelector(
+          ".how-to-use .feature-image-placeholder"
+        );
+        const diagramPlaceholders = document.querySelectorAll(
+          ".architecture-diagrams .diagram-placeholder"
+        );
+ 
         const observerOptions = {
-          threshold: 0.1,
+          threshold: 0.1, // Trigger when 10% of the element is visible
         };
-
+ 
         const observer = new IntersectionObserver(function (entries, observer) {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -629,46 +710,49 @@
             }
           });
         }, observerOptions);
-
+ 
         featureItems.forEach((item) => {
           observer.observe(item);
         });
-
+ 
         if (featureImage) observer.observe(featureImage);
         if (howToUseImage) observer.observe(howToUseImage);
         diagramPlaceholders.forEach((item) => {
           observer.observe(item);
         });
       });
-
+      // JavaScript to handle popup functionality
       function openPopup(src) {
         document.getElementById("popupImage").src = src;
         document.getElementById("popup").style.display = "flex";
       }
-
+ 
       function closePopup() {
         document.getElementById("popup").style.display = "none";
       }
-
+ 
       document.addEventListener("DOMContentLoaded", function () {
         const revealElements = document.querySelectorAll(".reveal-from-bottom");
-
+ 
         const revealOnScroll = () => {
           const viewportHeight = window.innerHeight;
-
+ 
           revealElements.forEach((element) => {
             const elementTop = element.getBoundingClientRect().top;
-
+ 
             if (elementTop < viewportHeight - 50) {
-              element.classList.add("active");
+              element.classList.add("active"); // 'active' class triggers the animation
             }
           });
         };
-
+ 
         window.addEventListener("scroll", revealOnScroll);
-
+ 
+        // Trigger reveal on initial load
         revealOnScroll();
       });
     </script>
   </body>
 </html>
+ 
+ 
