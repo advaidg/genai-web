@@ -168,6 +168,24 @@
         transform: translateX(0); /* Move to the original position */
       }
  
+      /* Project Overview Section styles */
+      .project-overview {
+        padding: 50px 0;
+        color: #c9d1d9;
+      }
+
+      .project-overview h2 {
+        font-size: 4.5rem;
+        font-weight: 400;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: revealText 1.5s ease forwards;
+        background: linear-gradient(90deg, #b24bf3 0%, #3f00ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: left;
+      }
+
       /* How to Use section styles */
       .how-to-use {
         padding: 50px 0;
@@ -396,6 +414,7 @@
     </div>
   </div>
 </div>
+
     <div class="hero">
       <img
         src="images/hero-top-right-decor.svg"
@@ -417,7 +436,8 @@
         Watch Intro
       </button>
     </div>
- 
+    
+    <!-- Features Section -->
     <div class="features" id="features">
       <div class="container">
         <div class="row">
@@ -470,169 +490,96 @@
       </div>
     </div>
  
-    <div class="how-to-use" id="how-to-use">
+    <!-- Project Overview Section -->
+    <div class="project-overview" id="project-overview">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 d-flex align-items-center">
-            <img
-              src="images/illustration-2.png"
-              alt="How to Use Placeholder"
-              class="feature-image-placeholder"
-            />
-          </div>
-          <div class="col-md-6">
-            <h2>How to Use</h2>
-            <div class="feature-item">
-              <h3>Upload Your Project</h3>
-              <p>
-                Begin by uploading your project files to BugBuster. The
-                intuitive interface makes it simple to select and submit your
-                codebase for analysis. Once uploaded, BugBuster will begin
-                processing your project to identify any issues or areas for
-                improvement.
-              </p>
-            </div>
-            <div class="feature-item">
-              <h3>Analyze Results</h3>
-              <p>
-                BugBuster utilizes SonarQube to perform a thorough analysis of
-                your code. The tool will generate detailed reports highlighting
-                potential issues, vulnerabilities, and areas where best
-                practices can be applied.
-              </p>
-            </div>
-            <div class="feature-item">
-              <h3>Apply Fixes and Generate PRs</h3>
-              <p>
-                After analysis, BugBuster provides automated fixes for detected
-                issues and generates pull requests to streamline the integration
-                of these fixes into your codebase. Review the changes, merge the
-                pull requests, and your code will be enhanced and up-to-date.
-              </p>
-            </div>
-          </div>
+          <div class="col-md-12">
+            <h2>Project Overview</h2>
+<p>
+  After analyzing your project using BugBuster, you will be provided with a comprehensive overview that includes the following metrics to assess your project's health:
+</p>
+<ul>
+  <li><strong>Risk Level:</strong> Indicates the overall risk associated with your code based on vulnerabilities and issues found. The levels include <span style="color: red;">High</span>, <span style="color: orange;">Medium</span>, and <span style="color: green;">Low</span>.</li>
+  <li><strong>Sonar Code Quality Issues:</strong> Highlights the number of critical code issues found during analysis, which might need immediate action.</li>
+  <li><strong>Using Vulnerable JARs:</strong> Reports whether your project is using any libraries or JARs that contain known security vulnerabilities.</li>
+  <li><strong>JUNits Missing:</strong> Indicates whether there are missing or insufficient JUnit tests in your project, which can affect the quality of test coverage.</li>
+</ul>
+<p>
+  Based on these metrics, your project will be classified into different risk categories:
+</p>
+<ul>
+  <li><span style="color: red;">High Risk:</span> Projects with critical security issues, a large number of code smells, or usage of outdated and vulnerable libraries.</li>
+  <li><span style="color: orange;">Medium Risk:</span> Projects that have some issues but are not immediately critical. These require attention but do not pose an immediate risk.</li>
+  <li><span style="color: green;">Low Risk:</span> Projects that follow best practices with minimal issues, ensuring maintainable and high-quality code.</li>
+</ul>
+<p>
+  BugBuster will help you categorize your project, identify key areas for improvement, and provide actionable insights on how to mitigate risks.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- How to Use Section -->
+<div class="how-to-use" id="how-to-use">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 d-flex align-items-center">
+        <img
+          src="images/illustration-2.png"
+          alt="How to Use Placeholder"
+          class="feature-image-placeholder"
+        />
+      </div>
+      <div class="col-md-6">
+        <h2>How to Use</h2>
+        <div class="feature-item">
+          <h3>Upload Your Project</h3>
+          <p>
+            Begin by uploading your project files to BugBuster. The intuitive interface makes it simple to select and submit your codebase for analysis. Once uploaded, BugBuster will begin processing your project to identify any issues or areas for improvement.
+          </p>
+        </div>
+        <div class="feature-item">
+          <h3>Analyze Results</h3>
+          <p>
+            BugBuster utilizes SonarQube to perform a thorough analysis of your code. The tool will generate detailed reports highlighting potential issues, vulnerabilities, and areas where best practices can be applied.
+          </p>
+        </div>
+        <div class="feature-item">
+          <h3>Apply Fixes and Generate PRs</h3>
+          <p>
+            After analysis, BugBuster provides automated fixes for detected issues and generates pull requests to streamline the integration of these fixes into your codebase. Review the changes, merge the pull requests, and your code will be enhanced and up-to-date.
+          </p>
         </div>
       </div>
     </div>
- 
-    <!-- Architecture Diagrams Section -->
-    <div class="architecture-diagrams">
-      <div class="container">
-        <div class="row text-center">
-          <div class="container">
-            <div class="row">
-              <div style="margin: auto" class="col-md-6">
-                <h2 style="text-align: left">
-                  Foundational Architecture Overview
-                </h2>
-                <div class="feature-item">
-                  <p>
-                    This diagram illustrates the backend architecture in detail,
-                    highlighting key components such as the API Gateway,
-                    Repository Manager, Analysis Manager, and Fix Manager. It
-                    provides a comprehensive view of how these components
-                    interact and collaborate to facilitate the end-to-end
-                    process of code analysis and automated fixes. The API
-                    Gateway serves as the central entry point for incoming
-                    requests, while the Repository Manager handles the storage
-                    and retrieval of code artifacts. The Analysis Manager
-                    performs in-depth code evaluations to identify issues, and
-                    the Fix Manager applies automated corrections. This cohesive
-                    interaction between components ensures an efficient and
-                    streamlined approach to managing and improving code quality.
-                  </p>
-                </div>
-              </div>
-              <div class="col-md-6 d-flex align-items-center">
-                <img
-                  style="cursor: pointer"
-                  src="images/level1arch.png"
-                  alt="How to Use Placeholder"
-                  class="reveal-from-bottom"
-                  onclick="openPopup('images/level1arch.png')"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="architecture-diagrams">
-      <div class="container">
-        <div class="row text-center">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 d-flex align-items-center">
-                <img
-                  style="cursor: pointer"
-                  src="images/level2arch.png"
-                  alt="How to Use Placeholder"
-                  class="reveal-from-bottom"
-                  onclick="openPopup('images/level2arch.png')"
-                />
-              </div>
- 
-              <div style="margin: auto" class="col-md-6">
-                <h2 style="text-align: left">Detailed Architecture Overview</h2>
-                <div class="feature-item">
-                  <p>
-                    This diagram presents a high-level overview of the AI-driven
-                    code analysis system’s architecture. It highlights the
-                    interactions between key elements, including users, the
-                    frontend, backend components, and external systems such as
-                    SonarQube, Google Gemini, and GitHub. The diagram
-                    illustrates how users interact with the frontend interface
-                    to submit code for analysis. The frontend then communicates
-                    with the backend, which orchestrates the analysis process
-                    using AI algorithms. The system integrates with SonarQube
-                    for code quality metrics, Google Gemini for advanced
-                    analytics, and GitHub for source code management and version
-                    control. This interconnected framework ensures a seamless
-                    flow of data and insights, driving enhanced code quality and
-                    automated improvements across the development lifecycle.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
- <!-- Architecture Diagrams Section -->
- <div class="architecture-diagrams">
+  </div>
+</div>
+
+<!-- Architecture Diagrams Section -->
+<div class="architecture-diagrams">
   <div class="container">
     <div class="row text-center">
       <div class="container">
         <div class="row">
           <div style="margin: auto" class="col-md-6">
             <h2 style="text-align: left">
-              RAG Architecture Overview
+              Foundational Architecture Overview
             </h2>
             <div class="feature-item">
               <p>
-                This diagram illustrates the backend architecture in detail,
-                highlighting key components such as the API Gateway,
-                Repository Manager, Analysis Manager, and Fix Manager. It
-                provides a comprehensive view of how these components
-                interact and collaborate to facilitate the end-to-end
-                process of code analysis and automated fixes. The API
-                Gateway serves as the central entry point for incoming
-                requests, while the Repository Manager handles the storage
-                and retrieval of code artifacts. The Analysis Manager
-                performs in-depth code evaluations to identify issues, and
-                the Fix Manager applies automated corrections. This cohesive
-                interaction between components ensures an efficient and
-                streamlined approach to managing and improving code quality.
+                This diagram illustrates the backend architecture in detail, highlighting key components such as the API Gateway, Repository Manager, Analysis Manager, and Fix Manager. It provides a comprehensive view of how these components interact and collaborate to facilitate the end-to-end process of code analysis and automated fixes.
               </p>
             </div>
           </div>
           <div class="col-md-6 d-flex align-items-center">
             <img
               style="cursor: pointer"
-              src="images/RAM.webp"
+              src="images/level1arch.png"
               alt="How to Use Placeholder"
               class="reveal-from-bottom"
-              onclick="openPopup('images/RAM.webp')"
+              onclick="openPopup('images/level1arch.png')"
             />
           </div>
         </div>
@@ -640,119 +587,117 @@
     </div>
   </div>
 </div>
-    <!-- Architecture Diagrams Section -->
-    <div class="demo-section">
+
+<div class="architecture-diagrams">
+  <div class="container">
+    <div class="row text-center">
       <div class="container">
-        <div class="row text-center">
-          <h2>Discover How BugBuster Works</h2>
-          <p style="text-align: left">
-            Watch our comprehensive video to see BugBuster in action and learn
-            how it can revolutionize your code quality assurance process.
-            Experience its powerful features and see how easy it is to integrate
-            into your workflow.
-          </p>
- 
-          <div style="height: 700px" class="video-container">
-            <iframe
-            class="video-iframe"
-            style="height: 100%; width: 100%;  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px !important;
-        border-radius: 25px !important;"
-             src="https://capgemini-my.sharepoint.com/personal/advaid_gireesan_capgemini_com/_layouts/15/embed.aspx?UniqueId=0cec5f30-bc00-439b-a9d6-a76c1b262109&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" frameborder="0" scrolling="no" allowfullscreen title="Demo.mp4"></iframe>
-            </iframe>
+        <div class="row">
+          <div class="col-md-6 d-flex align-items-center">
+            <img
+              style="cursor: pointer"
+              src="images/level2arch.png"
+              alt="How to Use Placeholder"
+              class="reveal-from-bottom"
+              onclick="openPopup('images/level2arch.png')"
+            />
+          </div>
+
+          <div style="margin: auto" class="col-md-6">
+            <h2 style="text-align: left">Detailed Architecture Overview</h2>
+            <div class="feature-item">
+              <p>
+                This diagram presents a high-level overview of the AI-driven code analysis system’s architecture. It highlights the interactions between key elements, including users, the frontend, backend components, and external systems such as SonarQube, Google Gemini, and GitHub.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
- 
-    <div class="thank-you-section">
-      <div class="container">
-        <div class="row text-center">
-          <h2>Thank You!</h2>
-          <h3>Team Mystic Mavericks</h3>
-          <p>
-            We appreciate your time and interest in BugBuster. If you have any
-            questions or need further assistance, feel free to contact us. We
-            look forward to helping you streamline your code quality assurance
-            process!
-          </p>
-        </div>
-      </div>
+  </div>
+</div>
+
+<!-- Thank You Section -->
+<div class="thank-you-section">
+  <div class="container">
+    <div class="row text-center">
+      <h2>Thank You!</h2>
+      <h3>Team Mystic Mavericks</h3>
+      <p>
+        We appreciate your time and interest in BugBuster. If you have any questions or need further assistance, feel free to contact us. We look forward to helping you streamline your code quality assurance process!
+      </p>
     </div>
- 
-    <!-- Popup for Images -->
-    <div class="popup" id="popup">
-      <span class="close" onclick="closePopup()">&times;</span>
-      <img id="popupImage" src="" alt="Popup Image" />
-    </div>
- 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const featureItems = document.querySelectorAll(".feature-item");
-        const featureImage = document.querySelector(
-          ".features .feature-image-placeholder"
-        );
-        const howToUseImage = document.querySelector(
-          ".how-to-use .feature-image-placeholder"
-        );
-        const diagramPlaceholders = document.querySelectorAll(
-          ".architecture-diagrams .diagram-placeholder"
-        );
- 
-        const observerOptions = {
-          threshold: 0.1, // Trigger when 10% of the element is visible
-        };
- 
-        const observer = new IntersectionObserver(function (entries, observer) {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          });
-        }, observerOptions);
- 
-        featureItems.forEach((item) => {
-          observer.observe(item);
-        });
- 
-        if (featureImage) observer.observe(featureImage);
-        if (howToUseImage) observer.observe(howToUseImage);
-        diagramPlaceholders.forEach((item) => {
-          observer.observe(item);
-        });
+  </div>
+</div>
+
+<!-- Popup for Images -->
+<div class="popup" id="popup">
+  <span class="close" onclick="closePopup()">&times;</span>
+  <img id="popupImage" src="" alt="Popup Image" />
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const featureItems = document.querySelectorAll(".feature-item");
+    const featureImage = document.querySelector(".features .feature-image-placeholder");
+    const howToUseImage = document.querySelector(".how-to-use .feature-image-placeholder");
+    const diagramPlaceholders = document.querySelectorAll(".architecture-diagrams .diagram-placeholder");
+
+    const observerOptions = {
+      threshold: 0.1, // Trigger when 10% of the element is visible
+    };
+
+    const observer = new IntersectionObserver(function (entries, observer) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
       });
-      // JavaScript to handle popup functionality
-      function openPopup(src) {
-        document.getElementById("popupImage").src = src;
-        document.getElementById("popup").style.display = "flex";
-      }
- 
-      function closePopup() {
-        document.getElementById("popup").style.display = "none";
-      }
- 
-      document.addEventListener("DOMContentLoaded", function () {
-        const revealElements = document.querySelectorAll(".reveal-from-bottom");
- 
-        const revealOnScroll = () => {
-          const viewportHeight = window.innerHeight;
- 
-          revealElements.forEach((element) => {
-            const elementTop = element.getBoundingClientRect().top;
- 
-            if (elementTop < viewportHeight - 50) {
-              element.classList.add("active"); // 'active' class triggers the animation
-            }
-          });
-        };
- 
-        window.addEventListener("scroll", revealOnScroll);
- 
-        // Trigger reveal on initial load
-        revealOnScroll();
+    }, observerOptions);
+
+    featureItems.forEach((item) => {
+      observer.observe(item);
+    });
+
+    if (featureImage) observer.observe(featureImage);
+    if (howToUseImage) observer.observe(howToUseImage);
+    diagramPlaceholders.forEach((item) => {
+      observer.observe(item);
+    });
+  });
+
+  // JavaScript to handle popup functionality
+  function openPopup(src) {
+    document.getElementById("popupImage").src = src;
+    document.getElementById("popup").style.display = "flex";
+  }
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const revealElements = document.querySelectorAll(".reveal-from-bottom");
+
+    const revealOnScroll = () => {
+      const viewportHeight = window.innerHeight;
+
+      revealElements.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (elementTop < viewportHeight - 50) {
+          element.classList.add("active"); // 'active' class triggers the animation
+        }
       });
-    </script>
-  </body>
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+
+    // Trigger reveal on initial load
+    revealOnScroll();
+  });
+</script>
+</body>
 </html>
- 
- 
+
