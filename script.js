@@ -65,3 +65,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+document.getElementById("more-link").addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default link behavior
+    const moreFeatures = document.getElementById("more-features");
+    if (moreFeatures.style.display === "none") {
+        moreFeatures.style.display = "block"; // Show the additional features
+        this.innerText = "Less"; // Change link text to 'Less'
+    } else {
+        moreFeatures.style.display = "none"; // Hide the additional features
+        this.innerText = "More"; // Change link text back to 'More'
+    }
+});
