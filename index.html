@@ -88,6 +88,84 @@
               <p>
                 Our proprietary Project Stability Index (PSI) gives real-time insights into your code’s health, categorizing it as Red, Yellow, or Green. This allows for strategic decision-making about where to focus development resources.
               </p>
+              <table  class="table table-dark" cellspacing="0" cellpadding="10">
+                <thead >
+                <tr>
+                <th>PSI Category</th>
+                <th>Definition</th>
+                <th>Example Issues</th>
+                <th>Action Needed</th>
+                </tr>
+                </thead>
+                <tbody >
+                <tr>
+                <td>High-Risk Breakers</td>
+                <td>Critical issues causing crashes or major security risks.</td>
+                <td>Memory leaks, SQL Injection</td>
+                <td>Immediate fix required.</td>
+                </tr>
+                <tr>
+                <td>Priority Fixes</td>
+                <td>Problems affecting performance or security.</td>
+                <td>Bottlenecks, outdated dependencies</td>
+                <td>Fix soon to avoid larger issues.</td>
+                </tr>
+                <tr>
+                <td>Optimization Points</td>
+                <td>Low-impact issues related to maintainability.</td>
+                <td>Code style violations, redundant code</td>
+                <td>Low priority, focus on long-term improvements.</td>
+                </tr>
+                <tr>
+                <td>Vulnerability Checkpoints</td>
+                <td>Potential security risks requiring review.</td>
+                <td>Code interacting with sensitive data</td>
+                <td>Manual review needed.</td>
+                </tr>
+                </tbody>
+                </table>
+
+              </br>
+              <table  class="table table-dark" cellspacing="0" cellpadding="10">
+                <thead>
+                <tr>
+                <th>Level</th>
+                <th>High-Risk Breakers</th>
+                <th>Priority Fixes</th>
+                <th>Optimization Points</th>
+                <th>Vulnerability Checkpoints</th>
+                <th>Coverage</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>Green</td>
+                <td>0</td>
+                <td>≤ 5</td>
+                <td>≤ 10</td>
+                <td>0</td>
+                <td>≥ 80%</td>
+                </tr>
+                <tr>
+                <td>Yellow</td>
+                <td>1 - 3</td>
+                <td>6 - 15</td>
+                <td>11 - 25</td>
+                <td>1 - 3</td>
+                <td>60% - 79%</td>
+                </tr>
+                <tr>
+                <td>Red</td>
+                <td>≥ 4</td>
+                <td>≥ 16</td>
+                <td>≥ 26</td>
+                <td>≥ 4</td>
+                <td>&lt; 60%</td>
+                </tr>
+                </tbody>
+                </table>
+                
+                 
             </div>
 
             <div class="feature-item">
@@ -226,10 +304,10 @@
               <div class="col-md-6 d-flex align-items-center">
                 <img
                   style="cursor: pointer"
-                  src="images/level1arch.png"
+                  src="images/arch1.png"
                   alt="How to Use Placeholder"
                   class="reveal-from-bottom"
-                  onclick="openPopup('images/level1arch.png')"
+                  onclick="openPopup('images/arch1.png')"
                 />
               </div>
             </div>
@@ -365,24 +443,23 @@
             look forward to helping you streamline your code quality assurance
             process!
           </p>
-          <div class="avatar-container">
+            <div class="avatar-container">
             <div class="avatar-item">
               <div class="avatar">D</div>
               <div class="avatar-name">Sourabh</div>
-          </div>
+            </div>
             <div class="avatar-item">
               <div class="avatar"><img src="images/harish.jpg"/></div>
                 <div class="avatar-name">Harish</div>
             </div>
             <div class="avatar-item">
-              <div class="avatar"><img src="images/Advaid.png"/></div>
+              <div class="avatar"><img src="images/Advaid.jpeg"/></div>
               <div class="avatar-name">Advaid</div>
-          </div>
+            </div>
             <div class="avatar-item">
                 <div class="avatar"><img src="images/shashi.jpg"/></div>
                 <div class="avatar-name">Shashi</div>
-            </div>
-            
+            </div>            
             <div class="avatar-item">
                 <div class="avatar">D</div>
                 <div class="avatar-name">Trilok</div>
