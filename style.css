@@ -396,6 +396,8 @@ body {
     font-size: 24px;
     color: #fff;
     font-weight: bold;
+    background-size: cover; /* Ensures image fills the avatar circle */
+            background-position: center; /* Centers the image in the avatar */
 }
 
 .avatar img {
@@ -409,6 +411,9 @@ body {
     font-size: 24px;
     color: #fff;
     font-weight: bold;
+    overflow: hidden; /* Important for images */
+    background-size: cover; /* Ensures image fills the avatar circle */
+    background-position: center; /* Centers the image in the avatar */
 }
 
 .avatar-name {
